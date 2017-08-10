@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .out{
+            background-color: #4495D3;
+            overflow: hidden;
+            min-width: 1280px;
+            margin: 0 auto;
+        }
+        .in {
+            list-style: none;
+            float: left;
+            margin: 20px;
+            color: white;
+            line-height: 25px;
+
+        }
+        .in:first-child{
+            font-size: 25px;
+        }
+        .in:last-child{
+            margin-left: 200px;
+        }
+    </style>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+
+</head>
+<body>
+<div id="big">
+    <!--<ul id="out">-->
+        <!--<li class="in">廖雪峰的官方网站</li>-->
+        <!--<li class="in">编程</li>-->
+        <!--<li class="in">读书</li>-->
+        <!--<li class="in">Java教程</li>-->
+        <!--<li class="in">Python教程</li>-->
+        <!--<li class="in">Git教程</li>-->
+        <!--<li class="in">问答</li>-->
+        <!--<li class="in">赞助</li>-->
+        <!--<li class="in">登录</li>-->
+    <!--</ul>-->
+</div>
+<script type="text/babel">
+    var arr = ['寥雪峰的官方网站','编程','读书','Java教程','JavaScript教程','Python教程','Git教程','问答','赞助','登录']
+
+    ReactDOM.render(<ul className="out">
+        {
+            arr.map(function (name) {
+                return <li className="in">{name}</li>
+            })
+        }
+    </ul>,document.getElementById('big'));
+</script>
+
+</body>
+</html>
